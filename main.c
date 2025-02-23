@@ -3,11 +3,22 @@
 #include <pthread.h>
 #include <unistd.h>
 #include <semaphore.h>
+#define MAX 3
 
 //Proyecto de SO uso de semaforos en un programa concurrente.
 //Integrantes:
 //Juan Diego Suarez CI:28083693
 
+
+// Estructuras de datos
+typedef struct Automovil {
+    char idAuto;
+    int bufferSenal[MAX];   //Arreglo para el buffer de señales
+    int contAmonestaciones; //total de amonestaciones
+    float multas;           //valor total de cada multa
+    int estacionado;        //1 estacionado, 0 no estacionado
+    
+}Automovil;
 
 int main(){
 

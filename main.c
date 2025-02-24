@@ -8,6 +8,7 @@
 //Proyecto de SO uso de semaforos en un programa concurrente.
 //Integrantes:
 //Juan Diego Suarez CI:28083693
+//Edgar Enmanuel Gutiérrez Flores CI:28505513
 
 
 // Estructuras de datos
@@ -17,7 +18,8 @@ typedef struct Automovil {
     int contAmonestaciones; //total de amonestaciones
     float multas;           //valor total de cada multa
     int estacionado;        //1 estacionado, 0 no estacionado
-    
+    sem_t mutex;            // semaforo para proteger el acceso de los vehiculos
+    sem_t buffer_sem;       // semaforo para controlar el espacio del buffer
 }Automovil;
 
 int main(){

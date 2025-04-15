@@ -1,1 +1,1 @@
-5 5 10
+semaforos: 40 centrales: 10 autos: 300
